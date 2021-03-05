@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 2;
+}
+
+section {
+    // .sentence {
+    //   background-color: green;
+    // }
+    // .feeling {
+    //   background-color: blue;
+    // }
+    // .irony {
+    //   background-color: purple;
+    // }
+    // .confidence {
+    //   background-color: orange;
+    // }
+    max-width: 800px;
+    margin: 50px auto;
+}
