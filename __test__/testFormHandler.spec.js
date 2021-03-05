@@ -1,18 +1,21 @@
 // import { update } from '../src/client/js/updateUi.js'
 // import { postData } from '../src/client/js/postLang.js'
 import { handleSubmit } from "../src/client/js/formHandler"
-
+// jest.mock('../src/client/js/formHandler');
 
 describe("Testing the submit functionality", () => {
   test("Testing the handleSubmit() function", () => {
       document.body.innerHTML =
-        `<form class="" id="form">` +
-        `    <input id="name" type="text" name="input" value=""  placeholder="Name">` +
-        `    <input type="submit" name="" value="submit">` +
-        `  </form>`;
+        '<form class="" id="form">' +
+        '    <input id="name" type="text" name="input" value=""  placeholder="Name">' +
+        '    <input type="submit" name="" value="submit">' +
+        '</form>';
 
+      const event = { preventDefault: () => {} };
+      jest.spyOn(event, 'preventDefault');
       const input = {};
       const output = [{}];
+      expect(event.preventDefault).toBeCalled();
       expect(handleSubmit()).toBe(output);
   })
 });
