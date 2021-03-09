@@ -8,29 +8,6 @@ describe("Testing the submit functionality", () => {
     test("Testing the postData function", () => {
           const input = [{url: 'http://localhost:8081/langauge', newInfo: "Hello, it's very nice to meet you"}];
           const output = [{
-            status: { code: '0', msg: 'OK', credits: '1', remaining_credits: '19929' },
-            model: 'general_en',
-            score_tag: 'P+',
-            agreement: 'AGREEMENT',
-            subjectivity: 'SUBJECTIVE',
-            confidence: '98',
-            irony: 'NONIRONIC',
-            sentence_list: [
-              {
-                text: "Hello, it's very nice to meet you",
-                inip: '0',
-                endp: '32',
-                bop: 'y',
-                confidence: '98',
-                score_tag: 'P+',
-                agreement: 'AGREEMENT',
-                segment_list: [Array],
-                sentimented_entity_list: [],
-                sentimented_concept_list: []
-              }
-            ],
-            sentimented_entity_list: [],
-            sentimented_concept_list: []
           }];
           try {
             expect(postData(input)).toBe(output);
