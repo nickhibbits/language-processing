@@ -50,7 +50,8 @@ app.post('/language', async function(req, res) {
   const userInput = data.formText;
   console.log(userInput);
 
-  const result = await fetch("https://api.meaningcloud.com/sentiment-2.1?key="+apiKey+"&of=json&txt="+userInput+"&lang=en", requestOptions)
+// change "&of=json&url" to "&of=json&txt" to accept user input
+  const result = await fetch("https://api.meaningcloud.com/sentiment-2.1?key="+apiKey+"&of=json&url="+userInput+"&lang=en", requestOptions)
   try {
     const response = await result.json();
     console.log(response);
