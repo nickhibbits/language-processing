@@ -4,17 +4,15 @@ import { postData } from './postLang'
 function handleSubmit(event) {
     event.preventDefault()
 
-    // check what text was put into the form field
+// check what text was put into the form field
+// unblock the commented out statement, and comment out the if block for porcessing a text input.
     let formText = document.getElementById('name').value;
+    // postData('http://localhost:8081/language', {formText})
+    // .then(() => update());
     if (is_url(formText)) {
       postData('http://localhost:8081/language', {formText})
       .then(() => update());
     }
-    // if (update() != false && postData() != false) {
-    //   // return 'success'
-    //   console.log("Call and update successful")
-    // }
-    // else{console.log("error")}
 }
 
 function is_url(str)
