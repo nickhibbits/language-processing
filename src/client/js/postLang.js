@@ -28,7 +28,7 @@ function is_url(str)
         }
         else
         {
-          return false;
+          return alert("Invalid input");
         }
 }
 
