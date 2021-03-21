@@ -1,5 +1,7 @@
-# Project Instructions
+# NLP News Evaluation App
 
-Project that engages the world of webpack, while offering exposure to a variety of loaders and plugins. Makes an API call.
+## Overview
+This app uses Natural Language Processing to check the tone of a news article when the url is entered
 
-This mimics the work environment of a professional setting. The different ways in which everything might be bundled when there are more files and data streams to manage, and more individuals with their hands in the workflow.
+### Additional 
+This app is my first encounter with webpack. It's also provided exposure to a variety of loaders and plugins. As well as additional experience working with APIs
